@@ -7,9 +7,20 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+  lenght: number =0;
   includeLetters: boolean = false;
   includeNumbers: boolean = false;
   includeSymbols: boolean = false;
+
+  modifyLenght(value:string){
+    const parsedValue = parseInt(value);
+
+    if(!isNaN(parsedValue))
+    {
+      debugger;
+      this. lenght= parsedValue;
+    }
+  }
 
   modifyLetters(){
     this.includeLetters = !this.includeLetters;
@@ -22,7 +33,6 @@ export class AppComponent {
   }
 
   buttonClick (){
-
     console.log (`Değerlerim;
     Letters : ${this.includeLetters}
     Numbers : ${this.includeNumbers}
