@@ -21,8 +21,10 @@
 </div>
 
 <div>
-  <button (click)=" buttonClick()">Oluştur</button>
-</div>
+  <button [disabled]="!(lenght && (includeLetters || includeNumbers || includeSymbols))" (click)=" buttonClick()">Oluştur</button>
+</div>  <!-- disableyi o şekilde yazmamızın nedeni lenght default olarak sıfırdı ve sıfır false anlamına geliyor.
+ayrıca checkboxlardan en az birinin işaretli olması gerektiği için &ve || yada imleci kullanıldı. burda baya matematikteki mantık konusu var
+ne işimize yarıcak diyodum yarıyomuş pu-->
 
 <div>
   <label>Şifreniz</label>
